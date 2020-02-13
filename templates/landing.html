@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Castiglion del bosco</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Cormorant&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .borgo {
+        background-image: url("/static/images/borgo.jpg");
+        background-repeat: no-repeat;
+        background: contain;
+        background-position: 15%;
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        position: relative;
+        transition: 0.35s;
+      }
+      .campagna {
+        background-image: url("/static/images/campagna.jpg");
+        background-repeat: no-repeat;
+        background: contain;
+        background-position: center;
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        position: relative;
+        transition: 0.35s;
+      }
+      .campagna:hover:after {
+        content: "";
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        background-color: rgba(54, 49, 49, 0.75);
+        opacity: 1;
+        transition: 0.35s;
+
+        animation: fadein 0.35s;
+      }
+      .cantina:hover:after {
+        content: "";
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        background-color: rgba(54, 49, 49, 0.75);
+        animation: fadein 0.35s;
+      }
+      .borgo:hover:after {
+        content: "";
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        background-color: rgba(54, 49, 49, 0.75);
+        animation: fadein 0.35s;
+      }
+
+      .cantina {
+        background-image: url("/static/images/cantina.jpg");
+        background-repeat: no-repeat;
+        background: contain;
+        background-position: center;
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        position: relative;
+        transition: 0.35s;
+      }
+      .cont-cantina {
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+      }
+      .padding {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+      .padding h3 {
+        font-family: "Cormorant", serif;
+        color: white;
+        position: absolute;
+        top: 65px;
+        margin: auto;
+        white-space: nowrap;
+        font-size: 2.3rem;
+        text-transform: uppercase;
+        letter-spacing: 8px;
+        z-index: 1000;
+      }
+
+      .padding h3:hover {
+        cursor: pointer;
+      }
+
+      .logo-cont {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 50%;
+        position: relative;
+      }
+      .logo-cont img {
+        max-width: 350px;
+        max-height: 200px;
+        position: absolute;
+        bottom: 50px;
+        z-index: 1000;
+      }
+
+      @media (max-width: 992px) {
+        .padding h3 {
+          font-size: 1.2rem;
+          margin-top: 15px;
+        }
+        .padding {
+          padding-right: 0px !important;
+          padding-left: 0px !important;
+        }
+      }
+      /* On screens that are 992px or less, set the background color to blue */
+      @media screen and (max-width: 778px) {
+        .logo-cont img {
+          max-width: 250px;
+          max-height: 100px;
+          position: absolute;
+          bottom: 50px;
+          z-index: 1000;
+        }
+      }
+      @keyframes fadein {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="container-fluid">
+        <div class="row " style="height: 100vh">
+          <div
+            class="col-lg-4 col-md-12 d-flex justify-content-center align-itemes-center padding"
+          >
+            <div class="borgo">
+              <div class="logo-cont">
+                <h3>Hotel</h3>
+                <img src="/static/logos/1.png" alt="hotel" />
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-4 col-md-12 d-flex justify-content-center align-itemes-center cont-cantina padding"
+          >
+            <div class="cantina">
+              <div class="logo-cont">
+                <h3>Cantina</h3>
+                <img src="/static/logos/2.png" alt="hotel" />
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-4 col-md-12 d-flex justify-content-center align-itemes-center padding"
+          >
+            <div class="campagna">
+              <div class="logo-cont">
+                <h3>Golf Club</h3>
+                <img src="/static/logos/3.png" alt="hotel" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
