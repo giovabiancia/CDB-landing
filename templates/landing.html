@@ -106,10 +106,22 @@
         font-family: "Cormorant", serif;
         color: white;
         position: absolute;
-        top: 65px;
+        top: 55px;
         margin: auto;
         white-space: nowrap;
         font-size: 2.3rem;
+        text-transform: uppercase;
+        letter-spacing: 8px;
+        z-index: 1000;
+      }
+      .logo-cont h4 {
+        font-family: "Cormorant", serif;
+        color: white;
+        position: absolute;
+        bottom: 30px;
+        margin: auto;
+        white-space: nowrap;
+        font-size: 1.1rem;
         text-transform: uppercase;
         letter-spacing: 8px;
         z-index: 1000;
@@ -175,7 +187,7 @@
             <div class="borgo">
               <div class="logo-cont">
                 <h3>Hotel</h3>
-                <img src="/static/logos/1.png" alt="hotel" />
+                <img class="img-fluid" src="/static/logos/1.png" alt="hotel" />
               </div>
             </div>
           </div>
@@ -185,7 +197,13 @@
             <div class="cantina">
               <div class="logo-cont">
                 <h3>Cantina</h3>
-                <img src="/static/logos/2.png" alt="hotel" />
+                <img
+                  class="img-fluid"
+                  src="/static/logos/2.png"
+                  alt="hotel"
+                  style="max-width: 320px; bottom:80px"
+                />
+                <h4 style=" bottom:55px">Winery</h4>
               </div>
             </div>
           </div>
@@ -195,7 +213,7 @@
             <div class="campagna">
               <div class="logo-cont">
                 <h3>Golf Club</h3>
-                <img src="/static/logos/3.png" alt="hotel" />
+                <img class="img-fluid" src="/static/logos/3.png" alt="hotel" />
               </div>
             </div>
           </div>
