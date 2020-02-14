@@ -151,22 +151,44 @@
         .padding h3 {
           font-size: 1.2rem;
           margin-top: 15px;
+          top: -120px;
         }
         .padding {
           padding-right: 0px !important;
           padding-left: 0px !important;
         }
-      }
-      /* On screens that are 992px or less, set the background color to blue */
-      @media screen and (max-width: 778px) {
+        .logo-cont img {
+          bottom: 10px;
+        }
         .logo-cont img {
           max-width: 250px;
-          max-height: 100px;
+          max-height: auto;
           position: absolute;
           bottom: 50px;
           z-index: 1000;
         }
+        .hotel {
+          bottom: 30px !important;
+        }
+        .golf {
+          bottom: 5px !important;
+        }
       }
+
+      @media (max-width: 576px) {
+        .logo-cont img {
+          max-width: 200px;
+          max-height: auto;
+        }
+        .golf {
+          max-width: 135px !important;
+          bottom: 30px !important;
+        }
+        .hotel {
+          bottom: 45px !important;
+        }
+      }
+
       @keyframes fadein {
         from {
           opacity: 0;
@@ -187,7 +209,11 @@
             <div class="borgo">
               <div class="logo-cont">
                 <h3>Hotel</h3>
-                <img class="img-fluid" src="/static/logos/1.png" alt="hotel" />
+                <img
+                  class="img-fluid hotel"
+                  src="/static/logos/1.png"
+                  alt="hotel"
+                />
               </div>
             </div>
           </div>
@@ -198,10 +224,10 @@
               <div class="logo-cont">
                 <h3>Cantina</h3>
                 <img
-                  class="img-fluid"
+                  class="img-fluid logo"
                   src="/static/logos/2.png"
                   alt="hotel"
-                  style="max-width: 320px; bottom:80px"
+                  style=" bottom:80px"
                 />
                 <h4 style=" bottom:55px">Winery</h4>
               </div>
@@ -213,7 +239,11 @@
             <div class="campagna">
               <div class="logo-cont">
                 <h3>Golf Club</h3>
-                <img class="img-fluid" src="/static/logos/3.png" alt="hotel" />
+                <img
+                  class="img-fluid logo golf"
+                  src="/static/logos/3.png"
+                  alt="hotel"
+                />
               </div>
             </div>
           </div>
