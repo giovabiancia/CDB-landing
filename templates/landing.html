@@ -22,8 +22,8 @@
     ></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <style>
-      .black {
-        color: black !important;
+      .wor {
+        height: 100vh;
       }
       .borgo {
         background-image: url("static/images/borgo.jpg");
@@ -137,8 +137,9 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 50%;
+        margin-bottom: 25px;
         position: relative;
+        height: 400px;
       }
       .logo-cont img {
         max-width: 350px;
@@ -152,9 +153,15 @@
       }
 
       @media (max-width: 992px) {
-        .alink {
-          margin-right: 0 !important;
-          margin: 1rem !important;
+        .footer-copyright a {
+          margin-right: 0;
+          margin: 1rem;
+        }
+        .wor {
+          height: 100%;
+        }
+        .logo-cont {
+          height: 300px;
         }
         .cantina {
           align-items: center;
@@ -169,6 +176,7 @@
         .padding h3 {
           font-size: 1.2rem;
           margin-top: 15px;
+
           position: initial;
         }
         .padding {
@@ -193,6 +201,9 @@
       }
 
       @media (max-width: 576px) {
+        .logo-cont {
+          height: 200px;
+        }
         .logo-cont img {
           max-width: 200px;
           max-height: auto;
@@ -203,10 +214,6 @@
         }
         .logo-cont h4 {
           bottom: -15px;
-        }
-        .alink {
-          margin-right: 0 !important;
-          margin: 1rem !important;
         }
       }
 
@@ -225,94 +232,86 @@
         font-family: ProximaNova-Semibold;
         font-size: 11px;
       }
-
       .footer-copyright a:hover {
         color: black;
       }
     </style>
   </head>
   <body>
-    <section>
-      <div class="container-fluid">
-        <div class="row " style="height: 97vh">
-          <div
-            class="col-lg-4 col-md-12 d-flex justify-content-center align-itemes-center padding"
+    <div class="container-fluid">
+      <div class="row  wor">
+        <div
+          class="col-lg-4 col-md-12 d-flex justify-content-center align-itemes-center padding"
+        >
+          <a
+            href="http://www.rosewoodhotels.com/en/castiglion-del-bosco"
+            style="width:100%; text-decoration: none !important;"
+            id="borgoA"
           >
-            <a
-              href="http://www.rosewoodhotels.com/en/castiglion-del-bosco"
-              style="width:100%; text-decoration: none !important;"
-              id="borgoA"
-            >
-              <div class="borgo" id="hotel">
-                <div class="logo-cont">
-                  <h3>Hotel</h3>
-                  <img
-                    class="img-fluid hotel"
-                    src="static/logos/1.png"
-                    alt="hotel"
-                  />
-                </div>
+            <div class="borgo" id="hotel">
+              <div class="logo-cont">
+                <h3>Hotel</h3>
+                <img
+                  class="img-fluid hotel"
+                  src="static/logos/1.png"
+                  alt="hotel"
+                />
               </div>
-            </a>
-          </div>
-          <div
-            class="col-lg-4 col-md-12 d-flex justify-content-center align-itemes-center cont-cantina padding"
+            </div>
+          </a>
+        </div>
+        <div
+          class="col-lg-4 col-md-12 d-flex justify-content-center align-itemes-center cont-cantina padding"
+        >
+          <a
+            href="http://wine.castigliondelbosco.com/en"
+            style="width:100%; text-decoration: none !important;"
+            id="cantinaA"
           >
-            <a
-              href="http://wine.castigliondelbosco.com"
-              style="width:100%; text-decoration: none !important;"
-              id="cantinaA"
-            >
-              <div class="cantina" id="cantina">
-                <div class="logo-cont">
-                  <h3 id="CantinaT">Cantina</h3>
-                  <img
-                    class="img-fluid logo"
-                    src="static/logos/2.png"
-                    alt="hotel"
-                    style=" bottom:80px"
-                  />
-                  <h4>Winery</h4>
-                </div>
+            <div class="cantina" id="cantina">
+              <div class="logo-cont">
+                <h3 id="CantinaT">Cantina</h3>
+                <img
+                  class="img-fluid logo"
+                  src="static/logos/2.png"
+                  alt="hotel"
+                  style=" bottom:80px"
+                />
+                <h4>Winery</h4>
               </div>
-            </a>
-          </div>
+            </div>
+          </a>
+        </div>
 
-          <div
-            class="col-lg-4 col-md-12 d-flex justify-content-center align-itemes-center padding"
+        <div
+          class="col-lg-4 col-md-12 d-flex justify-content-center align-itemes-center padding"
+        >
+          <a
+            href="http://golf.castigliondelbosco.com/en"
+            style="width:100%; text-decoration: none !important;"
+            id="golf-clubA"
           >
-            <a
-              href="http://golf.castigliondelbosco.com/en"
-              style="width:100%; text-decoration: none !important;"
-              id="golf-clubA"
-            >
-              <div class="campagna" id="golf-club">
-                <div class="logo-cont">
-                  <h3>Golf Club</h3>
-                  <img
-                    class="img-fluid logo golf"
-                    src="static/logos/3.png"
-                    alt="hotel"
-                  />
-                </div>
+            <div class="campagna" id="golf-club">
+              <div class="logo-cont">
+                <h3>Golf Club</h3>
+                <img
+                  class="img-fluid logo golf"
+                  src="static/logos/3.png"
+                  alt="hotel"
+                />
               </div>
-            </a>
-          </div>
+            </div>
+          </a>
         </div>
       </div>
-    </section>
-  </body>
-  <!-- Footer -->
-  <footer class="page-footer font-small blue  " style="height: 3vh">
-    <!-- Footer Links -->
+    </div>
 
-    <!-- Footer Links -->
     <div class="container">
       <div class="row">
         <div class="col-lg-2 col-sm-12 text-center footer-copyright">
-          <a style="cursor:pointer" class="alink" id="IT">IT</a>
-          <a style="cursor:pointer" class="alink" id="EN">EN</a>
-          <a style="cursor:pointer" class="alink" id="PT">PT</a>
+          <a style="cursor:pointer" id="IT">IT</a>
+          <a style="cursor:pointer" id="EN">EN</a>
+          <a style="cursor:pointer" id="PT">PT</a>
         </div>
 
         <!-- Copyright -->
@@ -330,16 +329,19 @@
         </div>
       </div>
     </div>
+  </body>
+  <!-- Footer -->
 
-    <!-- Copyright -->
-  </footer>
+  <!-- Footer Links -->
+
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
 
   <script>
     $(document).ready(function() {
+      var en = true;
       $("#EN").click(function() {
-        $("#IT").removeClass("black");
-        $("#PT").removeClass("black");
-        $(this).addClass("black");
         $("#CantinaT").html("WINERY");
         $("#cantinaA").attr("href", "http://wine.castigliondelbosco.com/en");
         $("#borgoA").attr(
@@ -349,9 +351,6 @@
         $("#golf-clubA").attr("href", "http://golf.castigliondelbosco.com/en");
       });
       $("#IT").click(function() {
-        $("#EN").removeClass("black");
-        $("#PT").removeClass("black");
-        $(this).addClass("black");
         $("#CantinaT").html("CANTINA");
         $("#cantinaA").attr("href", "http://wine.castigliondelbosco.com");
         $("#borgoA").attr(
@@ -361,9 +360,6 @@
         $("#golf-clubA").attr("href", "http://golf.castigliondelbosco.com/en");
       });
       $("#PT").click(function() {
-        $("#EN").removeClass("black");
-        $("#IT").removeClass("black");
-        $(this).addClass("black");
         $("#CantinaT").html("ADEGA");
         $("#cantinaA").attr("href", "http://wine.castigliondelbosco.com/en");
         $("#borgoA").attr(
