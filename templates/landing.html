@@ -20,9 +20,13 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <style>
+      .black {
+        color: black !important;
+      }
       .borgo {
-        background-image: url("/static/images/borgo.jpg");
+        background-image: url("static/images/borgo.jpg");
         background-repeat: no-repeat;
         background: contain;
         background-position: 15%;
@@ -34,9 +38,10 @@
         align-items: flex-end;
         position: relative;
         transition: 0.35s;
+        cursor: pointer;
       }
       .campagna {
-        background-image: url("/static/images/campagna.jpg");
+        background-image: url("static/images/campagna.jpg");
         background-repeat: no-repeat;
         background: contain;
         background-position: center;
@@ -48,6 +53,7 @@
         align-items: flex-end;
         position: relative;
         transition: 0.35s;
+        cursor: pointer;
       }
       .campagna:hover:after {
         content: "";
@@ -81,7 +87,7 @@
       }
 
       .cantina {
-        background-image: url("/static/images/cantina.jpg");
+        background-image: url("static/images/cantina.jpg");
         background-repeat: no-repeat;
         background: contain;
         background-position: center;
@@ -93,6 +99,7 @@
         align-items: flex-end;
         position: relative;
         transition: 0.35s;
+        cursor: pointer;
       }
       .cont-cantina {
         padding-right: 0px !important;
@@ -204,58 +211,169 @@
           opacity: 1;
         }
       }
+      .footer-copyright a {
+        margin-right: 2rem;
+        color: #99908a;
+        text-transform: uppercase;
+        font-family: ProximaNova-Semibold;
+        font-size: 11px;
+      }
+      .footer-copyright a:hover {
+        color: black;
+      }
     </style>
   </head>
   <body>
     <section>
       <div class="container-fluid">
-        <div class="row " style="height: 100vh">
+        <div class="row " style="height: 97vh">
           <div
             class="col-lg-4 col-md-12 d-flex justify-content-center align-itemes-center padding"
           >
-            <div class="borgo">
-              <div class="logo-cont">
-                <h3>Hotel</h3>
-                <img
-                  class="img-fluid hotel"
-                  src="/static/logos/1.png"
-                  alt="hotel"
-                />
+            <a
+              href="http://www.rosewoodhotels.com/en/castiglion-del-bosco"
+              style="width:100%; text-decoration: none !important;"
+              id="borgoA"
+            >
+              <div class="borgo" id="hotel">
+                <div class="logo-cont">
+                  <h3>Hotel</h3>
+                  <img
+                    class="img-fluid hotel"
+                    src="static/logos/1.png"
+                    alt="hotel"
+                  />
+                </div>
               </div>
-            </div>
+            </a>
           </div>
           <div
             class="col-lg-4 col-md-12 d-flex justify-content-center align-itemes-center cont-cantina padding"
           >
-            <div class="cantina">
-              <div class="logo-cont">
-                <h3>Cantina</h3>
-                <img
-                  class="img-fluid logo"
-                  src="/static/logos/2.png"
-                  alt="hotel"
-                  style=" bottom:80px"
-                />
-                <h4>Winery</h4>
+            <a
+              href="http://wine.castigliondelbosco.com"
+              style="width:100%; text-decoration: none !important;"
+              id="cantinaA"
+            >
+              <div class="cantina" id="cantina">
+                <div class="logo-cont">
+                  <h3 id="CantinaT">Cantina</h3>
+                  <img
+                    class="img-fluid logo"
+                    src="static/logos/2.png"
+                    alt="hotel"
+                    style=" bottom:80px"
+                  />
+                  <h4>Winery</h4>
+                </div>
               </div>
-            </div>
+            </a>
           </div>
+
           <div
             class="col-lg-4 col-md-12 d-flex justify-content-center align-itemes-center padding"
           >
-            <div class="campagna">
-              <div class="logo-cont">
-                <h3>Golf Club</h3>
-                <img
-                  class="img-fluid logo golf"
-                  src="/static/logos/3.png"
-                  alt="hotel"
-                />
+            <a
+              href="http://golf.castigliondelbosco.com/en"
+              style="width:100%; text-decoration: none !important;"
+              id="golf-clubA"
+            >
+              <div class="campagna" id="golf-club">
+                <div class="logo-cont">
+                  <h3>Golf Club</h3>
+                  <img
+                    class="img-fluid logo golf"
+                    src="static/logos/3.png"
+                    alt="hotel"
+                  />
+                </div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>
     </section>
   </body>
+  <!-- Footer -->
+  <footer class="page-footer font-small blue  " style="height: 3vh">
+    <!-- Footer Links -->
+
+    <!-- Footer Links -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2 col-sm-12 text-center footer-copyright">
+          <a style="cursor:pointer" id="IT">IT</a>
+          <a style="cursor:pointer" id="EN">EN</a>
+          <a style="cursor:pointer" id="PT">PT</a>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center col-lg-10 col-sm-12 ">
+          <a href="tel:+3905771913001">Tel. +39 0577 1913001</a>
+          <a href="mailto:info@castigliondelbosco.com"
+            >info@castigliondelbosco.com</a
+          >
+          <a>P. IVA 01194630529</a>
+          <a
+            href="http://golf.castigliondelbosco.com/en/corporate/privacy-terms"
+          >
+            Privacy &amp; Terms
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+  </footer>
+
+  <script>
+    $(document).ready(function() {
+      $("#EN").click(function() {
+        $("#IT").removeClass("black");
+        $("#PT").removeClass("black");
+        $(this).addClass("black");
+        $("#CantinaT").html("WINERY");
+        $("#cantinaA").attr("href", "http://wine.castigliondelbosco.com/en");
+        $("#borgoA").attr(
+          "href",
+          "http://www.rosewoodhotels.com/en/castiglion-del-bosco"
+        );
+        $("#golf-clubA").attr("href", "http://golf.castigliondelbosco.com/en");
+      });
+      $("#IT").click(function() {
+        $("#EN").removeClass("black");
+        $("#PT").removeClass("black");
+        $(this).addClass("black");
+        $("#CantinaT").html("CANTINA");
+        $("#cantinaA").attr("href", "http://wine.castigliondelbosco.com");
+        $("#borgoA").attr(
+          "href",
+          "http://www.rosewoodhotels.com/en/castiglion-del-bosco"
+        );
+        $("#golf-clubA").attr("href", "http://golf.castigliondelbosco.com/en");
+      });
+      $("#PT").click(function() {
+        $("#EN").removeClass("black");
+        $("#IT").removeClass("black");
+        $(this).addClass("black");
+        $("#CantinaT").html("ADEGA");
+        $("#cantinaA").attr("href", "http://wine.castigliondelbosco.com/en");
+        $("#borgoA").attr(
+          "href",
+          "http://www.rosewoodhotels.com/en/castiglion-del-bosco"
+        );
+        $("#golf-clubA").attr("href", "http://golf.castigliondelbosco.com/en");
+      });
+      /* $("#cantina").click(function() {
+        window.location.href = "http://wine.castigliondelbosco.com/";
+      });
+      $("#golf-club").click(function() {
+        window.location.href = "http://golf.castigliondelbosco.com/en";
+      });
+      $("#hotel").click(function() {
+        window.location.href =
+          "http://www.rosewoodhotels.com/en/castiglion-del-bosco";
+      }); */
+    });
+  </script>
 </html>
